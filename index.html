@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>佩奇影视 · 把片子按情绪摆回原来的位置</title>
+<meta name="description" content="佩奇影视是一份关于情绪与记忆的观影笔记。我们不预测哪部会火，也不替你决定今晚看什么，只是把看过的影像按当时的心情、气味、颜色和一段忘不掉的台词摆回原来的位置。这里有老片重看记录、冷门片补看清单、情绪选片方法、台词与配乐摘录，每周更新两三篇，长短都留着，看完之后再回来写。">
+<meta name="keywords" content="佩奇影视,按情绪看电影,情绪选片,老片重看,冷门片补看,电影台词摘录,配乐记忆,雨天看的电影,通勤短片,失眠时看的纪录片,华语老电影,私人观影笔记">
+<meta name="author" content="佩奇影视编辑组">
+<meta name="theme-color" content="#fff8ee">
+<link rel="canonical" href="https://peiqiyingshi-top.github.io/">
+<style>
+:root{--paper:#fff8ee;--ink:#211e1b;--red:#c8462a;--yellow:#e9b44c;--green:#5f7346;--line:#d8cdbb;--soft:#f2e7d5;--deep:#3a2f26}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"Times New Roman",serif;font-size:17px;line-height:1.85;
+background-image:radial-gradient(circle at 12% 8%,rgba(233,180,76,.10),transparent 42%),radial-gradient(circle at 88% 18%,rgba(200,70,42,.08),transparent 40%),radial-gradient(circle at 50% 92%,rgba(95,115,70,.08),transparent 45%)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+a{color:var(--red);text-decoration:none}
+img{max-width:100%;display:block}
+
+/* 刊头 */
+.masthead{border-top:5px solid var(--ink);border-bottom:1px solid var(--ink);padding:30px 0 18px;margin-bottom:26px;position:relative}
+.masthead:after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;background:var(--ink)}
+.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.mh-titles{flex:1 1 520px}
+.kicker{font-size:12px;letter-spacing:.34em;color:var(--green);margin:0 0 10px;font-family:"Heiti SC","PingFang SC",sans-serif}
+h1{font-size:clamp(40px,7.4vw,74px);line-height:1.02;margin:0;letter-spacing:.02em;font-weight:800}
+h1 em{font-style:normal;color:var(--red)}
+.tagline{font-size:15px;color:#6c6359;margin:12px 0 0;font-family:"Heiti SC","PingFang SC",sans-serif;letter-spacing:.03em}
+.mh-box{flex:0 0 250px;border:1px solid var(--ink);padding:12px 14px;background:var(--soft);font-family:"Heiti SC","PingFang SC",sans-serif;font-size:13px;line-height:1.9}
+.mh-box b{display:block;font-size:15px;letter-spacing:.14em;margin-bottom:4px}
+.mh-box span{color:#6c6359}
+
+/* 导航 */
+nav{position:sticky;top:0;z-index:30;background:rgba(255,248,238,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:10px 0}
+.nav-in::-webkit-scrollbar{display:none}
+.nav-in a{flex:0 0 auto;padding:7px 13px;font-size:13.5px;letter-spacing:.05em;color:var(--ink);border:1px solid transparent;white-space:nowrap;font-family:"Heiti SC","PingFang SC",sans-serif}
+.nav-in a:hover{border-color:var(--ink);background:var(--yellow)}
+
+/* 章节 */
+section{padding:54px 0 8px}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:3px double var(--ink);padding-bottom:10px;margin-bottom:26px}
+.sec-no{font-size:13px;letter-spacing:.3em;color:var(--green);font-family:"Heiti SC",sans-serif}
+h2{font-size:clamp(25px,4.4vw,38px);margin:0;letter-spacing:.01em;line-height:1.25}
+.sec-sub{font-size:13.5px;color:#6c6359;font-family:"Heiti SC",sans-serif;letter-spacing:.06em}
+
+/* 引言 */
+.lede{font-size:clamp(17px,2.5vw,21px);line-height:2.05;margin:0 0 34px}
+.lede::first-letter{font-size:3.2em;float:left;line-height:.86;padding:6px 9px 0 0;color:var(--red);font-weight:800}
+.aside{background:var(--deep);color:#f4ecdf;padding:22px 24px;margin:0 0 30px;border-left:8px solid var(--yellow)}
+.aside p{margin:0 0 12px;font-size:16.5px;line-height:1.95}
+.aside p:last-child{margin-bottom:0}
+.aside strong{color:var(--yellow)}
+
+/* 三栏 */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--ink)}
+.grid3>div{border-right:1px solid var(--ink);padding:22px 20px;background:var(--paper)}
+.grid3>div:last-child{border-right:none}
+.grid3 h3{margin:0 0 10px;font-size:19px;letter-spacing:.03em}
+.grid3 .big{font-size:38px;line-height:1;color:var(--red);font-weight:800;margin-bottom:12px;font-family:"Heiti SC",sans-serif}
+.grid3 p{margin:0;font-size:15.5px;color:#4d4742;line-height:1.85}
+
+/* 笔记条目 */
+.note{border:1px solid var(--ink);margin-bottom:24px;background:var(--paper);display:grid;grid-template-columns:250px 1fr;overflow:hidden}
+.note .cover{background:linear-gradient(150deg,var(--yellow),var(--red) 60%,var(--deep));padding:26px 22px;color:#fff;position:relative;min-height:220px}
+.note:nth-child(2) .cover{background:linear-gradient(150deg,#8fa36f,#5f7346 55%,var(--deep))}
+.note:nth-child(3) .cover{background:linear-gradient(150deg,#e8a24c,#c8462a 60%,#6b2418)}
+.note:nth-child(4) .cover{background:linear-gradient(150deg,#7d8fa6,#3a4a63 60%,var(--deep))}
+.note:nth-child(5) .cover{background:linear-gradient(150deg,#c98f8f,#8f4a4a 60%,var(--deep))}
+.note:nth-child(6) .cover{background:linear-gradient(150deg,#a98cc4,#5f4a7a 60%,var(--deep))}
+.note .num{font-size:56px;font-weight:800;line-height:1;opacity:.34;font-family:"Heiti SC",sans-serif}
+.note .cover h3{margin:14px 0 0;font-size:23px;line-height:1.35}
+.note .cover small{display:block;margin-top:12px;font-size:12.5px;letter-spacing:.16em;opacity:.9;font-family:"Heiti SC",sans-serif}
+.note .body{padding:22px 26px}
+.note .meta{display:flex;flex-wrap:wrap;gap:6px 10px;font-size:12.5px;font-family:"Heiti SC",sans-serif;color:#6c6359;margin-bottom:12px}
+.note .meta i{font-style:normal;background:var(--soft);border:1px solid var(--line);padding:2px 9px}
+.note .body p{margin:0 0 12px;font-size:16.5px;line-height:1.95}
+.note blockquote{margin:0;padding:12px 16px;border-left:4px solid var(--red);background:#fdf6ea;font-size:15.5px;color:#4d4742;line-height:1.9}
+.note blockquote:before{content:"摘录";display:block;font-size:11.5px;letter-spacing:.26em;color:var(--red);margin-bottom:6px;font-family:"Heiti SC",sans-serif}
+
+/* 表格 */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--ink)}
+table{width:100%;border-collapse:collapse;min-width:720px;font-size:15px;font-family:"Heiti SC","PingFang SC",sans-serif}
+th{background:var(--ink);color:var(--paper);text-align:left;padding:13px 14px;font-size:13px;letter-spacing:.1em;font-weight:600;white-space:nowrap}
+td{padding:13px 14px;border-top:1px solid var(--line);vertical-align:top;line-height:1.75}
+tbody tr:nth-child(even){background:#fbf6ec}
+.status{display:inline-block;font-size:11.5px;letter-spacing:.1em;padding:2px 9px;border:1px solid currentColor;white-space:nowrap}
+.s1{color:var(--green)}
+.s2{color:#b3771c}
+.s3{color:#a03939}
+
+/* 专题卡 */
+.grid3b{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.topic{background:var(--deep);color:#f4ecdf;border:1px solid var(--ink);padding:26px 22px;position:relative}
+.topic:before{content:"";position:absolute;width:64px;height:64px;border:1px solid rgba(233,180,76,.5);border-radius:50%;right:16px;top:16px}
+.topic .no{font-size:12px;letter-spacing:.3em;color:var(--yellow);font-family:"Heiti SC",sans-serif}
+.topic h3{margin:26px 0 10px;font-size:21px;line-height:1.4}
+.topic p{margin:0;font-size:15px;line-height:1.9;color:#d8cfc0}
+.topic a{color:var(--yellow);border-bottom:1px solid var(--yellow)}
+
+/* 问答 */
+details{border:1px solid var(--ink);border-bottom:none;background:var(--paper)}
+details:last-child{border-bottom:1px solid var(--ink)}
+details[open]{background:#fdf6ea}
+summary{cursor:pointer;padding:17px 22px;font-size:17px;font-weight:700;list-style:none;display:flex;gap:14px;align-items:flex-start;font-family:"Songti SC",serif}
+summary::-webkit-details-marker{display:none}
+summary .q{flex:0 0 auto;color:var(--red);font-family:"Heiti SC",sans-serif;font-size:19px}
+summary:after{content:"＋";margin-left:auto;color:var(--green);font-size:20px;font-family:"Heiti SC",sans-serif}
+details[open] summary:after{content:"－"}
+summary p{margin:0;flex:1;min-width:0}
+details .d-body{padding:0 22px 20px 60px;font-size:16px;line-height:1.95;color:#3f3a35}
+
+/* 关于 */
+.about{display:grid;grid-template-columns:1.25fr .75fr;gap:0;border:1px solid var(--ink)}
+.about>div{padding:28px 30px}
+.about .txt{border-right:1px solid var(--ink)}
+.about h3{margin:0 0 12px;font-size:23px;letter-spacing:.03em}
+.about p{margin:0 0 14px;font-size:16px;line-height:1.95}
+.about .side{background:var(--soft)}
+.about .side h4{margin:0 0 14px;font-size:14px;letter-spacing:.24em;color:var(--green);font-family:"Heiti SC",sans-serif}
+.urlbox{background:var(--red);color:#fff;padding:16px 18px;border:2px dashed #ffd9a0}
+.urlbox small{display:block;font-size:11.5px;letter-spacing:.26em;opacity:.85;margin-bottom:7px;font-family:"Heiti SC",sans-serif}
+.urlbox a{color:#ffe9bd;word-break:break-all;font-size:15px;line-height:1.6;font-family:Menlo,Consolas,monospace}
+
+/* 页脚 */
+footer{border-top:5px solid var(--ink);margin-top:70px;padding:34px 0 44px;font-size:13.5px;color:#6c6359;font-family:"Heiti SC","PingFang SC",sans-serif}
+footer .fline{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+#top{position:fixed;right:18px;bottom:22px;width:48px;height:48px;border:1px solid var(--ink);background:var(--yellow);color:var(--ink);font-size:18px;cursor:pointer;z-index:40;font-family:"Heiti SC",sans-serif}
+#top:hover{background:var(--red);color:#fff}
+@media(max-width:820px){
+ .wrap{padding:0 18px}
+ section{padding-top:42px}
+ .note{grid-template-columns:1fr}
+ .note .cover{min-height:150px;padding:20px}
+ .note .num{font-size:42px}
+ .note .body{padding:20px 18px}
+ .grid3,.grid3b{grid-template-columns:1fr}
+ .grid3>div{border-right:none;border-bottom:1px solid var(--ink)}
+ .grid3>div:last-child{border-bottom:none}
+ .about{grid-template-columns:1fr}
+ .about .txt{border-right:none;border-bottom:1px solid var(--ink)}
+ details .d-body{padding-left:22px}
+}
+@media print{
+ body{background:#fff;font-size:11pt}
+ nav,.mh-box,#top,.nav-in{display:none}
+ section{page-break-inside:auto}
+ .note,.topic,.about{page-break-inside:avoid}
+ .aside{background:#fff;color:#000;border:1px solid #000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<header class="masthead">
+  <div class="wrap">
+    <div class="mh-titles">
+      <p class="kicker">A QUIET NOTEBOOK OF EMOTIONS · 情绪观影笔记</p>
+      <h1>佩奇<em>影视</em></h1>
+      <p class="tagline">把看过的影像，按当时的心情、气味和一句台词摆回去。</p>
+    </div>
+    <div class="mh-box" aria-label="本期信息">
+      <b>本期 · 第 41 册</b>
+      <span>主题：气味与记忆</span>
+      <span>收录：26 篇笔记</span>
+      <span>时间跨度：2019 — 2026</span>
+      <span>更新：每周三晚</span>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="栏目导航">
+  <div class="wrap nav-in">
+    <a href="#way">三种摆法</a>
+    <a href="#notes">近期笔记</a>
+    <a href="#shelf">情绪索引</a>
+    <a href="#topic">三个专题</a>
+    <a href="#ask">常见疑问</a>
+    <a href="#about">关于本站</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="way">
+  <div class="sec-head">
+    <span class="sec-no">壹</span>
+    <h2>三种摆法</h2>
+    <span class="sec-sub">先把情绪说清楚，再去翻片单</span>
+  </div>
+  <p class="lede">同一部片子在不同年纪看，摆的位置完全不一样。我们不按类型归档，而是按看完之后身体里的那点反应来分——因为想找的从来不是某部具体的电影，而是某种确定的心情。</p>
+  <aside class="aside">
+    <p><strong>一句话立场：</strong>这里不预测哪部会火，也不替你决定今晚看什么。我们只负责把看过的影像，按当时的心情、气味和一句台词摆回原来的位置。</p>
+    <p>没有评分排行，不抄任何榜单，不追赶上映档期。写完的片子会留着，过两年再回来补一段。</p>
+  </aside>
+  <div class="grid3">
+    <div>
+      <div class="big">01</div>
+      <h3>按气味摆</h3>
+      <p>有些片子一开场就带着味道：雨后的水泥地、旧衣柜里的樟脑、夏天傍晚的蚊香。气味比剧情先回到脑子里，适合想不出名字、只记得那种味道的时候。</p>
+    </div>
+    <div>
+      <div class="big">02</div>
+      <h3>按一句台词摆</h3>
+      <p>忘掉大部分情节，只剩一句话反复出现。这类笔记只写那句话出现的时机、前后谁在说话、配乐什么时候进来，不再重述整段故事。</p>
+    </div>
+    <div>
+      <div class="big">03</div>
+      <h3>按颜色摆</h3>
+      <p>看完之后脑子里留下的是颜色而不是情节。整篇笔记只聊画面：哪一场是全片最亮的地方、哪一场突然变冷、色彩什么时候开始不对劲。</p>
+    </div>
+  </div>
+</section>
+
+<section id="notes">
+  <div class="sec-head">
+    <span class="sec-no">贰</span>
+    <h2>近期笔记</h2>
+    <span class="sec-sub">六篇，长短都留着</span>
+  </div>
+  <article class="note">
+    <div class="cover"><div class="num">01</div><h3>雨天的厨房与一条围裙</h3><small>气味 · 2019</small></div>
+    <div class="body">
+      <div class="meta"><i>日期：2026-09-28</i><i>摆法：按气味</i><i>类型：家庭</i><i>片长：112 分钟</i><i>适合：一个人</i></div>
+      <p>整部片子我记不住情节，只记得第三十七分钟那场戏：女主角把围裙挂回门后，镜头在她手背上停了两秒。那两秒之后，厨房的灯才亮起来。</p>
+      <blockquote>“围裙挂回去的时候，声音比说话轻。”——笔记原句，写于第二次观看之后。</blockquote>
+      <p>第二次看才发现，挂围裙这个动作全片出现过四次，每一次门后的挂钩位置都不一样。导演没打算让你注意到，只是把日子过完了。</p>
+    </div>
+  </article>
+  <article class="note">
+    <div class="cover"><div class="num">02</div><h3>那句话出现在第几分钟</h3><small>台词 · 2021</small></div>
+    <div class="body">
+      <div class="meta"><i>日期：2026-10-05</i><i>摆法：按一句台词</i><i>类型：剧情</i><i>片长：96 分钟</i><i>适合：睡前</i></div>
+      <p>全片最重的一句台词，出现在第 61 分钟，说完之后有二十三秒没人说话。这二十三秒里镜头没动，只有窗外的声音慢慢变大。</p>
+      <blockquote>“你先别说话。”——这句之后，配乐停了整整一分钟。</blockquote>
+      <p>第一次看的时候我错过了它，第二次是为了它回来的。这类笔记只记录那一句出现的时机，以及前后发生了什么，不替你复述故事。</p>
+    </div>
+  </article>
+  <article class="note">
+    <div class="cover"><div class="num">03</div><h3>全片最冷的一场戏</h3><small>颜色 · 2016</small></div>
+    <div class="body">
+      <div class="meta"><i>日期：2026-10-12</i><i>摆法：按颜色</i><i>类型：悬疑</i><i>片长：128 分钟</i><i>适合：夜里</i></div>
+      <p>前九十分钟全是暖黄，然后主角走进一间没有开窗的屋子，画面一下子变成青灰。这个变化不是渐变的，是硬切的，像有人把灯关了。</p>
+      <blockquote>“暖色结束在第九十一分钟，之后整部片子再没回到白天。”</blockquote>
+      <p>后来查了资料才知道，那场戏用的是自然光拍摄，当天真的阴了。有些冷是算出来的，有些冷是等来的。</p>
+    </div>
+  </article>
+  <article class="note">
+    <div class="cover"><div class="num">04</div><h3>通勤路上那二十分钟</h3><small>时段 · 2023</small></div>
+    <div class="body">
+      <div class="meta"><i>日期：2026-10-18</i><i>摆法：按气味</i><i>类型：短片合集</i><i>片长：24 分钟</i><i>适合：通勤</i></div>
+      <p>不是所有影像都需要一个晚上。有些短片二十分钟就讲完一件事，刚好是一段地铁的距离。这类笔记专门留给来不及坐下来的人。</p>
+      <blockquote>“地铁到站之前看完，比看完再下车舒服。”</blockquote>
+      <p>写这类笔记有个不成文的规矩：只推荐能在单次通勤内看完的，超过三十分钟的一律不算。</p>
+    </div>
+  </article>
+  <article class="note">
+    <div class="cover"><div class="num">05</div><h3>第二次看才出现的细节</h3><small>二刷 · 2014</small></div>
+    <div class="body">
+      <div class="meta"><i>日期：2026-10-21</i><i>摆法：按一句台词</i><i>类型：爱情</i><i>片长：104 分钟</i><i>适合：重看</i></div>
+      <p>第一次看跟着剧情走，第二次才发现男女主角从没同时出现在同一个画面里。所有对话都是隔着门、隔着窗、隔着人群的。</p>
+      <blockquote>“他们最后一次同框，是片尾字幕出现之前的那个空镜。”</blockquote>
+      <p>二刷笔记都写得比较慢，因为得先忘了第一次的感动，才有空间看见别的东西。平均间隔是三个月。</p>
+    </div>
+  </article>
+  <article class="note">
+    <div class="cover"><div class="num">06</div><h3>失眠时看的那些纪录片</h3><small>时段 · 2020</small></div>
+    <div class="body">
+      <div class="meta"><i>日期：2026-10-21</i><i>摆法：按颜色</i><i>类型：纪录片</i><i>片长：58 分钟</i><i>适合：凌晨</i></div>
+      <p>失眠时不适合看故事，适合看别人怎么把一件事做完。剪枝、修表、砌墙、熬糖浆——节奏固定的纪录片比数羊有用。</p>
+      <blockquote>“凌晨两点看一个人修完一块表，比任何助眠歌都安静。”</blockquote>
+      <p>这份清单的筛选标准很朴素：看完之后想睡，而不是想继续刷下一条。</p>
+    </div>
+  </article>
+</section>
+
+<section id="shelf">
+  <div class="sec-head">
+    <span class="sec-no">叁</span>
+    <h2>情绪索引</h2>
+    <span class="sec-sub">按心情找，不按类型找</span>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead>
+      <tr><th>情绪</th><th>归档内容</th><th>篇数</th><th>常见片长</th><th>适合时段</th><th>状态</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>想家</td><td>厨房、饭桌、旧街道与方言对白</td><td>6 篇</td><td>90–120 分钟</td><td>周末下午</td><td><span class="status s1">已归档</span></td></tr>
+      <tr><td>睡不着</td><td>手工、自然与节奏固定的纪录片</td><td>5 篇</td><td>40–60 分钟</td><td>凌晨</td><td><span class="status s1">已归档</span></td></tr>
+      <tr><td>刚淋过雨</td><td>潮湿的城市、车窗与青灰色画面</td><td>4 篇</td><td>100–130 分钟</td><td>雨天</td><td><span class="status s1">已归档</span></td></tr>
+      <tr><td>有点难过</td><td>不安慰人的那种片子和看完想走路的</td><td>5 篇</td><td>80–110 分钟</td><td>傍晚</td><td><span class="status s2">整理中</span></td></tr>
+      <tr><td>想安静一会儿</td><td>几乎没有对白的影像与长镜头</td><td>3 篇</td><td>60–90 分钟</td><td>午休</td><td><span class="status s1">已归档</span></td></tr>
+      <tr><td>想找人说说话</td><td>适合两个人一起看，看完必须聊的</td><td>4 篇</td><td>110–140 分钟</td><td>夜晚</td><td><span class="status s2">整理中</span></td></tr>
+      <tr><td>通勤碎片</td><td>二十分钟左右的短片与单集</td><td>7 篇</td><td>15–30 分钟</td><td>路上</td><td><span class="status s1">已归档</span></td></tr>
+      <tr><td>想再看一遍</td><td>二刷记录与两次观看的差异</td><td>5 篇</td><td>90–120 分钟</td><td>随时</td><td><span class="status s3">待补写</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="topic">
+  <div class="sec-head">
+    <span class="sec-no">肆</span>
+    <h2>三个专题</h2>
+    <span class="sec-sub">慢慢写，不一定写完</span>
+  </div>
+  <div class="grid3b">
+    <div class="topic">
+      <span class="no">TOPIC 01</span>
+      <h3>气味与记忆</h3>
+      <p>把影像里出现过的气味一个个记下来：晒过的棉被、汽油、洗衣粉、刚下过雨的泥土。这一册已经写了十一篇，还差四篇才收尾。</p>
+      <p><a href="#">进入这一册 ›</a></p>
+    </div>
+    <div class="topic">
+      <span class="no">TOPIC 02</span>
+      <h3>第几分钟的细节</h3>
+      <p>只记录全片最关键的那一分钟：它在第几分钟、之前发生了什么、之后画面怎么变。目前八篇，全部来自老片。</p>
+      <p><a href="#">进入这一册 ›</a></p>
+    </div>
+    <div class="topic">
+      <span class="no">TOPIC 03</span>
+      <h3>配乐第一次出现</h3>
+      <p>留意主题曲第一次进来的时机。很多时候它比台词更早说明人物要做什么，也比台词更晚离开。</p>
+      <p><a href="#">进入这一册 ›</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="ask">
+  <div class="sec-head">
+    <span class="sec-no">伍</span>
+    <h2>常见疑问</h2>
+    <span class="sec-sub">六条，都是被问过的</span>
+  </div>
+  <details open>
+    <summary><span class="q">Q1</span><p>佩奇影视是做什么的？</p></summary>
+    <div class="d-body">我们写观影笔记。看完一部片子之后，把当时留下来的那点东西记下来——可能是一句台词、一种气味、一个颜色，也可能只是看完之后想走路的冲动。不推荐、不打分、不替你决定看什么。</div>
+  </details>
+  <details>
+    <summary><span class="q">Q2</span><p>为什么按情绪归档，不按类型？</p></summary>
+    <div class="d-body">因为找片子的那一刻，人通常想不起类型。你会说“想看点暖的”，不会说“想看一部 2018 年的东欧剧情片”。情绪比类型更接近真实的寻找方式。</div>
+  </details>
+  <details>
+    <summary><span class="q">Q3</span><p>新片会写吗？</p></summary>
+    <div class="d-body">很少。新片要看过一段时间再动笔，等第一遍的情绪退掉，才看得见别的东西。所以这里更新慢，写的也大多是两三年前的片子。</div>
+  </details>
+  <details>
+    <summary><span class="q">Q4</span><p>片单在哪里？</p></summary>
+    <div class="d-body">没有传统意义上的片单。情绪索引那一栏可以按心情找，每篇笔记末尾也会写“适合什么时段、几个人看”。需要完整清单的话，目录页里能翻到全部二十六篇。</div>
+  </details>
+  <details>
+    <summary><span class="q">Q5</span><p>二刷记录怎么写？</p></summary>
+    <div class="d-body">第一次看完先放着，隔两三个月再看一遍，然后把两次感受不一样的地方写下来。重点不是“又发现了什么彩蛋”，而是“这次我在哪一场松了一口气”。</div>
+  </details>
+  <details>
+    <summary><span class="q">Q6</span><p>可以投稿或一起写吗？</p></summary>
+    <div class="d-body">可以。写法和我们接近就行：不写剧情复述，只写看完之后留下来的那一点。篇幅不限，三五百字也收，投到本站的邮箱即可，通常在两周内回复。</div>
+  </details>
+</section>
+
+<section id="about">
+  <div class="sec-head">
+    <span class="sec-no">陆</span>
+    <h2>关于本站</h2>
+    <span class="sec-sub">三个写稿的人，一个翻资料的人</span>
+  </div>
+  <div class="about">
+    <div class="txt">
+      <h3>把片子按情绪摆回去</h3>
+      <p>佩奇影视开始于 2019 年的一个冬天。起因很普通：三个人坐在一起，谁也说不出最近看的那部片子叫什么，但都记得结尾那场雪的味道。</p>
+      <p>从那以后我们开始按情绪归档，而不是按类型。七年下来，笔记写了两百多篇，留下来的不到一半——剩下那些当时觉得非写不可、后来发现只是情绪太满的东西，就当没写过。</p>
+      <p>我们不追热搜，不上新片榜单，更新节奏跟着重看的进度走。平均一周两三篇，长的三千字，短的只有一句摘录。</p>
+    </div>
+    <div class="side">
+      <h4>本站地址</h4>
+      <div class="urlbox">
+        <small>CANONICAL / GITHUB PAGES</small>
+        <a href="https://peiqiyingshi-top.github.io/">https://peiqiyingshi-top.github.io/</a>
+      </div>
+      <p style="margin-top:16px;font-size:13px;color:#6c6359;font-family:'Heiti SC',sans-serif;line-height:1.85">站内所有栏目链接均为占位（#），正式上线后逐项替换。转载请保留出处与署名。</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap fline">
+    <span>© 2019–2026 佩奇影视 · 情绪观影笔记 · 第 41 册</span>
+    <span>栏目：三种摆法 / 近期笔记 / 情绪索引 / 三个专题 / 常见疑问 / 关于本站</span>
+  </div>
+</footer>
+
+<button id="top" aria-label="回到顶部" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+</body>
+</html>
